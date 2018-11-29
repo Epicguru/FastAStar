@@ -93,3 +93,8 @@ else
   }
 }
 ```
+
+## Notes
+* I haven't gone into any detail with the possible PathfindingResult values, because most of them are self explainatory.
+* Multithreaded pathfinding is possible with this system, but not implemented by default. I plan to upload the multithreaded version of this system soon(ish).
+* Ocassionaly, you may get the ERROR_PATH_TOO_LONG result. This happens when a very large or complex path is calculated. To fix this, at the cost of memory usage, increase the value of Pathfinding.MAX within the source code. 
