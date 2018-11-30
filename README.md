@@ -2,6 +2,7 @@
 A generic but fast implementation of the A* pathfinding algorithm. Can be used with any game engine, and has been tested with Unity.
 Requires you to have certain things set up within your project: see below for details on getting things running.
 This system is made possible by [BlueRaja's High Speed Priority Queue](https://github.com/BlueRaja/High-Speed-Priority-Queue-for-C-Sharp).
+want to suggest a change? Open an issue and I'll try to merge it as soon as possible.
 
 ## Requirements
 You must already have some kind of 2D tile-based world set up.
