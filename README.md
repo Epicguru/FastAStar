@@ -9,7 +9,7 @@ Want to suggest a change? Open an issue on Github and I'll try to merge it as so
 You must already have some kind of 2D tile-based world set up.
 This 2D world must have limits, as in a width and a height that never change.
 The very minimum required to use the pathfinding system is to be able to quickly determine weather a particular tile is 'walkable' or not. Specifically you must be able to return true or false to the following:
-```
+```C#
 public bool IsTileWalkable(int x, int y)
 {
   // Return true if the tile can be walked through, false if it cannot be walked through (such as a wall).
@@ -30,7 +30,7 @@ This is how you would use this system within your own project...
 Once you are sure you meet the requirements within your project, create a new class that inherits from TileProvider.
 Then override the abstract function called IsTileWalkable. This function is the base minimum for the system to work, as described in the Requirements section.
 The complete class might looks something like this.
-```
+```C#
 public class MyProvider : TileProvider
 {
   // Some kind of 2D map. How you implement this is up to you.
@@ -54,7 +54,7 @@ public class MyProvider : TileProvider
 Now that you have the provider class set up, you can use the Pathfinding class to actually do pathfinding to determine a path from a starting position to a target position.
 
 Here is a sample of code that would determine the path from a starting point to the end, using the provider that we set up:
-```
+```C#
 // Create an instance of the Pathfinding class. You will normally only need one instance of this for your whole project.
 Pathfinding pather = new Pathfinding();
 
